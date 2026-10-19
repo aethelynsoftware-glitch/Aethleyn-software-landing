@@ -1,0 +1,12 @@
+{
+  "title": "Aethelyn Software — Ingeniería de software a medida",
+  "description": "Diseño y desarrollo de software a medida, aplicaciones web, automatización, integraciones y dashboards para necesidades empresariales reales.",
+  "language": "es",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,7 @@
+project_id = "aethelyn-software"
+
+[functions.submit-contact]
+verify_jwt = false
+
+[functions.retry-contact-notifications]
+verify_jwt = false
