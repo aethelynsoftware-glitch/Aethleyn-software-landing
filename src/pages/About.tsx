@@ -1,24 +1,29 @@
-import Button from "../components/ui/Button"
-import { ArchitectureVisual } from "../components/visuals/Visuals"
-import { Icon } from "../components/ui/Icons"
+import InnerHero from "../components/organisms/InnerHero"
+import SectionHeading from "../components/molecules/SectionHeading"
+import Button from "../components/atoms/Button"
+import ArchitectureVisual from "../components/organisms/ArchitectureVisual"
+import Icon from "../components/atoms/Icon"
 
 export default function About() {
   return (
     <>
-      <section className="inner-hero about-hero">
-        <div className="container inner-hero-grid">
-          <div>
-            <span className="breadcrumb">AETHELYN / NOSOTROS</span>
-            <h1>
-              Tecnología con propósito. <em>Ingeniería con criterio.</em>
-            </h1>
-            <p>
-              En Aethelyn Software buscamos construir soluciones digitales que
-              respondan a problemas reales, con una combinación de comprensión
-              del negocio, diseño técnico y desarrollo responsable.
-            </p>
-            <Button to="/contacto">Conoce cómo podemos ayudarte</Button>
-          </div>
+      <InnerHero
+        className="about-hero"
+        intro={<span className="breadcrumb">AETHELYN / NOSOTROS</span>}
+        title={
+          <>
+            Tecnología con propósito. <em>Ingeniería con criterio.</em>
+          </>
+        }
+        description={
+          <>
+            En Aethelyn Software buscamos construir soluciones digitales que
+            respondan a problemas reales, con una combinación de comprensión del
+            negocio, diseño técnico y desarrollo responsable.
+          </>
+        }
+        action={<Button to="/contacto">Conoce cómo podemos ayudarte</Button>}
+        visual={
           <div
             className="about-art"
             role="img"
@@ -36,8 +41,8 @@ export default function About() {
               Evolución
             </div>
           </div>
-        </div>
-      </section>
+        }
+      />
       <section className="vision section light-section">
         <div className="container vision-grid">
           <div>
@@ -59,21 +64,22 @@ export default function About() {
       </section>
       <section className="work-way section">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="section-number">NUESTRA FORMA DE TRABAJAR</span>
-              <h2>
+          <SectionHeading
+            label={<>NUESTRA FORMA DE TRABAJAR</>}
+            title={
+              <>
                 Comprender antes
                 <br />
                 de construir.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               Definimos objetivos claros, tomamos decisiones técnicas
               fundamentadas y mantenemos una comunicación transparente durante
               el proyecto.
             </p>
-          </div>
+          </SectionHeading>
           <div className="principle-cards">
             {[
               [
@@ -109,20 +115,22 @@ export default function About() {
       </section>
       <section className="technical-capacity dark-section section">
         <div className="container">
-          <div className="section-head light">
-            <div>
-              <span className="section-number">CAPACIDAD TÉCNICA</span>
-              <h2>
+          <SectionHeading
+            light
+            label={<>CAPACIDAD TÉCNICA</>}
+            title={
+              <>
                 Distintas disciplinas.
                 <br />
                 Una solución coherente.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               Conectamos experiencia, aplicaciones, servicios y datos para
               construir herramientas empresariales completas.
             </p>
-          </div>
+          </SectionHeading>
           <ArchitectureVisual />
           <div className="tech-list">
             {[

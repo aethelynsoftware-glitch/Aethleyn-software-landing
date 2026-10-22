@@ -1,6 +1,7 @@
 import { useState } from "react"
-import Button, { TextLink } from "../components/ui/Button"
-import { SystemVisual } from "../components/visuals/Visuals"
+import Button from "../components/atoms/Button"
+import TextLink from "../components/atoms/TextLink"
+import SystemVisual from "../components/organisms/SystemVisual"
 
 const projects = [
   {
@@ -82,13 +83,13 @@ export default function Projects() {
             <div>
               {["Todos", "Software", "Web", "Automatización", "Datos"].map(
                 (x) => (
-                  <button
+                  <Button
                     onClick={() => setActive(x)}
                     className={active === x ? "active" : ""}
                     key={x}
                   >
                     {x}
-                  </button>
+                  </Button>
                 ),
               )}
             </div>

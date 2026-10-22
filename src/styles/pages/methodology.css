@@ -1,0 +1,28 @@
+/* Methodology */
+.methodology-hero .inner-hero-grid { grid-template-columns: 1fr .8fr; }
+.method-orbit { position: relative; width: 430px; aspect-ratio: 1; margin: auto; border: 1px solid rgba(114,165,255,.24); border-radius: 50%; animation: softFloat 5s ease-in-out infinite; }
+.method-orbit::before, .method-orbit::after { content: ""; position: absolute; inset: 15%; border: 1px dashed rgba(114,165,255,.25); border-radius: 50%; }
+.method-orbit::after { inset: 34%; border-style: solid; background: rgba(56,107,255,.08); }
+.method-orbit > span { position: absolute; z-index: 2; inset: 43%; display: grid; place-items: center; border-radius: 50%; color: white; background: var(--blue); font-size: 30px; font-weight: 500; }
+.method-orbit > div { position: absolute; z-index: 2; padding: 10px 13px; border: 1px solid #30466b; border-radius: 3px; color: #c7d4e6; background: #121f34; font-size: 9px; }
+.method-orbit > div:nth-child(1) { top: 5%; left: 40%; }.method-orbit > div:nth-child(2) { top: 46%; right: -6%; }.method-orbit > div:nth-child(3) { bottom: 4%; left: 38%; }.method-orbit > div:nth-child(4) { top: 46%; left: -8%; }
+.method-intro .container { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: end; }
+.method-intro h2 { margin: 0; }
+.method-intro p { font-size: 17px; }
+.phase-section { padding-bottom: 120px; }
+.phase { position: relative; overflow: hidden; min-height: 280px; padding: 55px 30px; display: grid; grid-template-columns: 110px 1.2fr 1fr; gap: 55px; border-top: 1px solid #c7d1de; }
+.phase:last-child { border-bottom: 1px solid #c7d1de; }
+.phase-index { display: flex; flex-direction: column; }
+.phase-index span { color: #728097; font-size: 8px; letter-spacing: .15em; }
+.phase-index strong { margin-top: 8px; color: var(--blue); font-size: 29px; font-weight: 500; }
+.phase-index i { width: 1px; height: 70px; margin-top: 20px; background: #aeb9c8; }
+.phase-copy h2 { font-size: 39px; }
+.phase-copy p { max-width: 440px; }
+.phase ul { margin: 0; padding: 0; list-style: none; }
+.phase li { padding: 11px 0; display: flex; gap: 11px; align-items: center; border-bottom: 1px solid #d5dce5; color: #536176; font-size: 12px; }
+.phase li svg { color: var(--blue); }
+.phase-watermark { position: absolute; right: -10px; bottom: -70px; color: rgba(16,24,39,.025); font-size: 220px; font-weight: 700; }
+.scope-section { background: #dfe6ef; }
+.scope-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 90px; }
+.scope-grid p { font-size: 16px; }
+.scope-grid .button { margin-top: 20px; }

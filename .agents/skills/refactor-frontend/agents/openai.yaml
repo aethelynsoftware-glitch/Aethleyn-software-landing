@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refactorizar frontend"
+  short_description: "Refactoriza componentes con atomic design"
+  default_prompt: "Usa $refactor-frontend para refactorizar el archivo que te indique con componentes genéricos y atomic design; si no indiqué una ruta, pídemela."

@@ -1,4 +1,4 @@
-import Button from "../components/ui/Button"
+import Button from "../components/atoms/Button"
 
 export default function NotFound() {
   return (

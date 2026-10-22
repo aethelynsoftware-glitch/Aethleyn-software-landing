@@ -10,7 +10,6 @@ export const CONTACT_BUDGETS = [
 export const CONTACT_PREFERENCES = [
   "Correo electrónico",
   "Videollamada",
-  "Teléfono (al configurarlo)",
 ] as const
 
 export const CONTACT_SERVICES = [

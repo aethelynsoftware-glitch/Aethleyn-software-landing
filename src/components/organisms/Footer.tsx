@@ -1,6 +1,6 @@
 import { Link } from "react-router"
-import Brand from "../brand/Brand"
-import { Icon } from "../ui/Icons"
+import Brand from "../molecules/Brand"
+import Icon from "../atoms/Icon"
 import { mainNav, services } from "../../data/site"
 
 export default function Footer() {

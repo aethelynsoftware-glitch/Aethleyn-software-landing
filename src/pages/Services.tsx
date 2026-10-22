@@ -1,27 +1,31 @@
-import Button, { TextLink } from "../components/ui/Button"
-import { HeroComposition, SystemVisual } from "../components/visuals/Visuals"
+import InnerHero from "../components/organisms/InnerHero"
+import Button from "../components/atoms/Button"
+import TextLink from "../components/atoms/TextLink"
+import HeroComposition from "../components/organisms/HeroComposition"
+import SystemVisual from "../components/organisms/SystemVisual"
 import { services } from "../data/site"
-import { FinalCta } from "../components/sections/FinalCta"
+import FinalCta from "../components/organisms/FinalCta"
 
 export default function Services() {
   return (
     <>
-      <section className="inner-hero services-hero">
-        <div className="container inner-hero-grid">
-          <div>
-            <span className="breadcrumb">AETHELYN / SERVICIOS</span>
-            <h1>
-              Soluciones digitales para <em>necesidades reales.</em>
-            </h1>
-            <p>
-              Desarrollamos herramientas tecnológicas adaptadas a los procesos,
-              objetivos y desafíos de cada organización.
-            </p>
-            <Button to="/contacto">Consultar un proyecto</Button>
-          </div>
-          <HeroComposition />
-        </div>
-      </section>
+      <InnerHero
+        className="services-hero"
+        intro={<span className="breadcrumb">AETHELYN / SERVICIOS</span>}
+        title={
+          <>
+            Soluciones digitales para <em>necesidades reales.</em>
+          </>
+        }
+        description={
+          <>
+            Desarrollamos herramientas tecnológicas adaptadas a los procesos,
+            objetivos y desafíos de cada organización.
+          </>
+        }
+        action={<Button to="/contacto">Consultar un proyecto</Button>}
+        visual={<HeroComposition />}
+      />
       <section className="services-manifesto">
         <div className="container">
           <span>Diseñamos con contexto.</span>

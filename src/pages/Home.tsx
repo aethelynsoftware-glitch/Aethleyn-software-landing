@@ -1,12 +1,12 @@
-import Button, { TextLink } from "../components/ui/Button"
-import {
-  ArchitectureVisual,
-  HeroComposition,
-  SystemVisual,
-} from "../components/visuals/Visuals"
-import { Icon } from "../components/ui/Icons"
+import SectionHeading from "../components/molecules/SectionHeading"
+import Button from "../components/atoms/Button"
+import TextLink from "../components/atoms/TextLink"
+import ArchitectureVisual from "../components/organisms/ArchitectureVisual"
+import HeroComposition from "../components/organisms/HeroComposition"
+import SystemVisual from "../components/organisms/SystemVisual"
+import Icon from "../components/atoms/Icon"
 import { services } from "../data/site"
-import { FinalCta } from "../components/sections/FinalCta"
+import FinalCta from "../components/organisms/FinalCta"
 
 const stages = [
   [
@@ -119,20 +119,21 @@ export default function Home() {
 
       <section className="services-home section">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="section-number">02 — CAPACIDADES</span>
-              <h2>
+          <SectionHeading
+            label={<>02 — CAPACIDADES</>}
+            title={
+              <>
                 Soluciones tecnológicas
                 <br />
                 diseñadas para avanzar.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               El punto de partida no es un producto cerrado. Es el problema que
               tu organización necesita resolver.
             </p>
-          </div>
+          </SectionHeading>
           <div className="service-editorial">
             {services.map((service, i) => (
               <article
@@ -156,21 +157,23 @@ export default function Home() {
 
       <section className="architecture-section section dark-section">
         <div className="container">
-          <div className="section-head light">
-            <div>
-              <span className="section-number">03 — INGENIERÍA</span>
-              <h2>
+          <SectionHeading
+            light
+            label={<>03 — INGENIERÍA</>}
+            title={
+              <>
                 Desde la arquitectura
                 <br />
                 hasta la experiencia final.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               Cada proyecto requiere decisiones técnicas diferentes. Diseñamos
               cada capa para responder a las necesidades reales de uso,
               integración y evolución.
             </p>
-          </div>
+          </SectionHeading>
           <ArchitectureVisual />
           <div className="architecture-caption">
             <span>Una solución conectada, no una suma de piezas.</span>
@@ -237,19 +240,20 @@ export default function Home() {
 
       <section className="method-preview section">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="section-number">05 — PROCESO</span>
-              <h2>
+          <SectionHeading
+            label={<>05 — PROCESO</>}
+            title={
+              <>
                 Un proceso claro desde
                 <br />
                 la primera conversación.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <Button to="/metodologia" variant="light">
               Conoce nuestra metodología
             </Button>
-          </div>
+          </SectionHeading>
           <div className="timeline">
             {stages.map(([n, title, desc]) => (
               <div key={n}>
@@ -265,20 +269,21 @@ export default function Home() {
 
       <section className="projects-preview section light-section">
         <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="section-number">06 — EXPLORACIÓN</span>
-              <h2>
+          <SectionHeading
+            label={<>06 — EXPLORACIÓN</>}
+            title={
+              <>
                 El trabajo habla a través
                 <br />
                 de las soluciones.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               Conceptos propios que muestran cómo abordamos diferentes desafíos
               técnicos. Identificados siempre como demostrativos.
             </p>
-          </div>
+          </SectionHeading>
           <div className="project-grid">
             <article className="project-large">
               <SystemVisual kind="data" />

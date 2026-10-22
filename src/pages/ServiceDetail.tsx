@@ -1,8 +1,12 @@
+import InnerHero from "../components/organisms/InnerHero"
+import SectionHeading from "../components/molecules/SectionHeading"
 import { Link, Navigate, useParams } from "react-router"
-import Button, { TextLink } from "../components/ui/Button"
-import { ArchitectureVisual, SystemVisual } from "../components/visuals/Visuals"
+import Button from "../components/atoms/Button"
+import TextLink from "../components/atoms/TextLink"
+import ArchitectureVisual from "../components/organisms/ArchitectureVisual"
+import SystemVisual from "../components/organisms/SystemVisual"
 import { services } from "../data/site"
-import { Icon } from "../components/ui/Icons"
+import Icon from "../components/atoms/Icon"
 
 export default function ServiceDetail() {
   const { serviceSlug } = useParams()
@@ -11,9 +15,10 @@ export default function ServiceDetail() {
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 2)
   return (
     <>
-      <section className={`inner-hero detail-hero kind-${service.kind}`}>
-        <div className="container inner-hero-grid">
-          <div>
+      <InnerHero
+        className={`detail-hero kind-${service.kind}`}
+        intro={
+          <>
             <div className="breadcrumbs">
               <Link to="/servicios">Servicios</Link>
               <Icon name="chevron" size={14} />
@@ -22,13 +27,13 @@ export default function ServiceDetail() {
             <span className="eyebrow">
               <i /> {service.number} · {service.short}
             </span>
-            <h1>{service.hero}</h1>
-            <p>{service.lead}</p>
-            <Button to="/contacto">Consultar sobre este servicio</Button>
-          </div>
-          <SystemVisual kind={service.kind} />
-        </div>
-      </section>
+          </>
+        }
+        title={service.hero}
+        description={service.lead}
+        action={<Button to="/contacto">Consultar sobre este servicio</Button>}
+        visual={<SystemVisual kind={service.kind} />}
+      />
       <section className="service-intro-strip">
         <div className="container">
           <strong>
@@ -63,20 +68,22 @@ export default function ServiceDetail() {
       </section>
       <section className="service-architecture dark-section section">
         <div className="container">
-          <div className="section-head light">
-            <div>
-              <span className="section-number">CRITERIO TÉCNICO</span>
-              <h2>
+          <SectionHeading
+            light
+            label={<>CRITERIO TÉCNICO</>}
+            title={
+              <>
                 La estructura correcta
                 <br />
                 para el contexto correcto.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               No partimos de una arquitectura cerrada. Evaluamos usuarios,
               datos, integraciones y evolución esperada antes de decidir.
             </p>
-          </div>
+          </SectionHeading>
           <ArchitectureVisual />
         </div>
       </section>

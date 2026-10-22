@@ -1,6 +1,6 @@
-import Button from "../ui/Button"
+import Button from "../atoms/Button"
 
-export function FinalCta() {
+export default function FinalCta() {
   return (
     <section className="final-cta">
       <div className="cta-grid" />

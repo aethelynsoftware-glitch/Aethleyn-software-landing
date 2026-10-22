@@ -1,0 +1,16 @@
+/* Main hero */
+.hero { position: relative; overflow: hidden; min-height: 820px; color: var(--white); background: radial-gradient(circle at 75% 35%, rgba(56,107,255,.13), transparent 30%), var(--night); }
+.hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(114,165,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(114,165,255,.055) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to right, transparent 3%, black 55%, transparent 98%); }
+.hero-grid { position: relative; z-index: 1; min-height: 820px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 45px; padding-top: 78px; }
+.hero-copy { max-width: 650px; padding: 70px 0; }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: var(--blue-light); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.eyebrow i { width: 22px; height: 1px; background: var(--blue-light); }
+.hero h1 { max-width: 720px; margin-bottom: 25px; font-size: clamp(52px, 5.6vw, 78px); line-height: .99; font-weight: 500; }
+.hero h1 span { color: var(--blue-light); }
+.hero-copy > p { max-width: 630px; color: #aab6c8; font-size: 16px; line-height: 1.75; }
+.hero-actions { display: flex; gap: 12px; margin-top: 34px; }
+.hero-pillars { display: flex; gap: 22px; margin-top: 55px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,.1); }
+.hero-pillars div { flex: 1; display: flex; align-items: center; gap: 9px; color: #aeb9c9; font-size: 10px; line-height: 1.35; }
+.hero-pillars svg { flex: none; color: var(--blue-light); }
+.hero-index { position: absolute; right: 28px; bottom: 40px; display: flex; align-items: center; gap: 12px; transform: rotate(-90deg); transform-origin: right bottom; color: #5f6c7f; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.hero-index i { width: 45px; height: 1px; background: #3c485a; }

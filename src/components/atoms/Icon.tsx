@@ -1,8 +1,12 @@
 import type { ReactNode } from "react"
 
-type IconProps = { name: string; size?: number; className?: string }
+type IconProps = {
+  name: string
+  size?: number
+  className?: string
+}
 
-export function Icon({ name, size = 20, className = "" }: IconProps) {
+export default function Icon({ name, size = 20, className = "" }: IconProps) {
   const paths: Record<string, ReactNode> = {
     arrow: (
       <>

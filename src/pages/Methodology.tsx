@@ -1,6 +1,8 @@
-import Button from "../components/ui/Button"
-import { ArchitectureVisual } from "../components/visuals/Visuals"
-import { Icon } from "../components/ui/Icons"
+import InnerHero from "../components/organisms/InnerHero"
+import SectionHeading from "../components/molecules/SectionHeading"
+import Button from "../components/atoms/Button"
+import ArchitectureVisual from "../components/organisms/ArchitectureVisual"
+import Icon from "../components/atoms/Icon"
 
 const phases = [
   {
@@ -52,20 +54,23 @@ const phases = [
 export default function Methodology() {
   return (
     <>
-      <section className="inner-hero methodology-hero">
-        <div className="container inner-hero-grid">
-          <div>
-            <span className="breadcrumb">AETHELYN / METODOLOGÍA</span>
-            <h1>
-              Cada proyecto comienza con <em>claridad.</em>
-            </h1>
-            <p>
-              Una buena solución tecnológica no empieza escribiendo código.
-              Empieza entendiendo qué necesita el negocio y definiendo cómo
-              resolverlo.
-            </p>
-            <Button to="/contacto">Hablemos de tu proyecto</Button>
-          </div>
+      <InnerHero
+        className="methodology-hero"
+        intro={<span className="breadcrumb">AETHELYN / METODOLOGÍA</span>}
+        title={
+          <>
+            Cada proyecto comienza con <em>claridad.</em>
+          </>
+        }
+        description={
+          <>
+            Una buena solución tecnológica no empieza escribiendo código.
+            Empieza entendiendo qué necesita el negocio y definiendo cómo
+            resolverlo.
+          </>
+        }
+        action={<Button to="/contacto">Hablemos de tu proyecto</Button>}
+        visual={
           <div
             className="method-orbit"
             role="img"
@@ -77,8 +82,8 @@ export default function Methodology() {
             <div>Evolucionar</div>
             <span>A</span>
           </div>
-        </div>
-      </section>
+        }
+      />
       <section className="method-intro section light-section">
         <div className="container">
           <span className="section-number">EL PROCESO</span>
@@ -118,19 +123,21 @@ export default function Methodology() {
       </section>
       <section className="method-map dark-section section">
         <div className="container">
-          <div className="section-head light">
-            <div>
-              <span className="section-number">VISIÓN DE CONJUNTO</span>
-              <h2>
+          <SectionHeading
+            light
+            label={<>VISIÓN DE CONJUNTO</>}
+            title={
+              <>
                 Planificación, diseño y<br />
                 tecnología conectados.
-              </h2>
-            </div>
+              </>
+            }
+          >
             <p>
               Las decisiones de una fase informan a la siguiente. La validación
               mantiene alineadas la necesidad y la solución.
             </p>
-          </div>
+          </SectionHeading>
           <ArchitectureVisual />
         </div>
       </section>
